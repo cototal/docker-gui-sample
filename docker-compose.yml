@@ -1,0 +1,11 @@
+version: "3.4"
+services:
+  app:
+    container_name: xeyes
+    build:
+      context: .
+    environment:
+      - DISPLAY
+    volumes:
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+    network_mode: host
